@@ -1,0 +1,11 @@
+# Define the language server command
+[language-server.capy-language-server]
+command = "capybara"
+args = ["--lsp"]
+
+[[language]]
+name = "capybara"
+scope = "source.capy"
+file-types = ["capy", "capybara"]
+language-servers = ["capy-language-server"]
+

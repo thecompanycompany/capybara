@@ -1,0 +1,25 @@
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+
+def distance(p1, p2):
+    dx = p2.x - p1.x
+    dy = p2.y - p1.y
+    return dx * dx + dy * dy
+
+
+def greet(name):
+    print(name)
+
+
+def main():
+    p = Point(1.0, 2.0)
+    d = distance(p, Point(4.0, 6.0))
+    i = 0
+    while i < 10:
+        i = i + 1
+    for x in range(5):
+        greet("hello")
+    return 0

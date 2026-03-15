@@ -1,0 +1,7 @@
+@extern
+def puts(s: str) -> int:
+    pass
+
+@extern
+def printf(fmt: str, v1: int, v2: int) -> int:
+    pass

@@ -1,0 +1,17 @@
+def test_params(mut pos_only, /, pos_or_kw, *, kw_only):
+    puts("Test params")
+
+def test_variadic(*args, **kwargs):
+    puts("Test variadic")
+
+def test_errors() raises:
+    try:
+        puts("Inside try")
+        raise Error("something went wrong")
+    except e:
+        puts("Caught error")
+
+def main():
+    test_params(1, 2, 3)
+    test_variadic(1, 2, 3)
+    test_errors()

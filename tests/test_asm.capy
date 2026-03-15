@@ -1,0 +1,17 @@
+def main():
+    # Test valid inline asm
+    asm("nop", "")
+    
+    # Test with arguments
+    val = 10
+    result = 0
+    
+    # Simple mov
+    asm("mov %1, %0", "=r,r", result, val)
+    # result should be 10 now, but we can't assert it easily without stdlib
+    # relying on llvm checks
+    
+    asm("add $5, %0", "=r,0", val, val)
+    # val should be 15
+    
+    return 0
